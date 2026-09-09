@@ -17,6 +17,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Railway uses this unauthenticated endpoint to determine whether the API is ready.
+app.get('/health', (_req, res) => res.status(200).json({ status: 'ok' }));
+
 const loginSchema = z.object({
   email: z.string().email(),
   password: z.string().min(1),

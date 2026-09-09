@@ -2,8 +2,8 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "node_modules/.bin/tsx src/server.ts"
-healthcheckPath = "/api/auth/me"
+startCommand = "npm run prisma:deploy && npm run start"
+healthcheckPath = "/health"
 healthcheckTimeout = 30
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 5
