@@ -304,15 +304,7 @@ BullMQ uses Redis-backed atomic counters for rate limiting — when the window i
 | Ethereal SMTP | Zero-config safe testing | Not for real email delivery |
 | Monorepo | Easier setup, shared tooling | Less separation of concerns at scale |
 
----
 
-## 📹 Demo Video
-
-See `demo.mp4` in the repository root for a walkthrough covering:
-1. Creating scheduled emails from the frontend
-2. Dashboard showing Scheduled and Sent email counts
-3. Restart scenario: stopping and restarting the server — future emails still send
-4. Rate limiting behavior under load
 
 ---
 
