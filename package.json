@@ -1,0 +1,13 @@
+{
+  "name": "outbox-email-scheduler",
+  "private": true,
+  "workspaces": ["frontend", "server"],
+  "scripts": {
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "npm --prefix server run dev",
+    "worker": "npm --prefix server run worker",
+    "db:generate": "npm --prefix server run prisma:generate",
+    "db:migrate": "npm --prefix server run prisma:deploy",
+    "build": "npm run build --prefix frontend && npm run build --prefix server"
+  }
+}
