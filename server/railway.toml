@@ -1,0 +1,9 @@
+﻿[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "node_modules/.bin/tsx src/server.ts"
+healthcheckPath = "/api/auth/me"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 5

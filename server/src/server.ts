@@ -11,7 +11,10 @@ import { ensureDefaultUser } from './bootstrap.js';
 import { recoverPendingEmails } from './recovery.js';
 
 const app = express();
-app.use(cors({ origin: config.frontendUrl }));
+app.use(cors({
+  origin: config.frontendUrl === '*' ? true : config.frontendUrl,
+  credentials: true,
+}));
 app.use(express.json());
 
 const loginSchema = z.object({

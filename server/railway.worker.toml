@@ -1,0 +1,7 @@
+﻿[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "node_modules/.bin/tsx src/worker.ts"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 5
